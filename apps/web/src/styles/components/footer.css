@@ -1,0 +1,24 @@
+.footer {
+  background: var(--color-primary);
+  color: white;
+  padding: 48px 0 24px;
+  margin-top: 40px;
+}
+
+.footer h4 {
+  color: var(--color-gold);
+  margin-bottom: 16px;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 32px;
+  padding-top: 24px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}

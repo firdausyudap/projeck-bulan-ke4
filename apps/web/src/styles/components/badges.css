@@ -1,0 +1,64 @@
+.verification-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.verification-VERIFIED {
+  background: #d4edda;
+  color: #155724;
+}
+
+.verification-INTERPRETED {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.verification-ORAL_TRADITION {
+  background: #d1ecf1;
+  color: #0c5460;
+}
+
+.verification-LEGEND {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.verification-DISPUTED {
+  background: #f5c6cb;
+  color: #721c24;
+}
+
+.verification-NEEDS_RESEARCH {
+  background: #e2e3e5;
+  color: #383d41;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--color-cream);
+  color: var(--color-text);
+}
+
+.badge-published {
+  background: #d4edda;
+  color: #155724;
+}
+
+.badge-draft {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.badge-archived {
+  background: #e2e3e5;
+  color: #383d41;
+}

@@ -1,0 +1,22 @@
+:root {
+  --color-primary: #14213D;
+  --color-secondary: #1F3D2B;
+  --color-gold: #C9A227;
+  --color-gold-light: #E6C86E;
+  --color-cream: #F5F1E8;
+  --color-text: #1A2420;
+  --color-text-light: #5a6b60;
+  --color-border: #d4d0c4;
+  --color-bg: #F5F1E8;
+  --color-card: #ffffff;
+  --color-error: #c0392b;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(20, 33, 61, 0.08);
+  --shadow-md: 0 4px 12px rgba(20, 33, 61, 0.12);
+  --shadow-lg: 0 12px 32px rgba(20, 33, 61, 0.18);
+  --max-width: 1280px;
+  --nav-height: 72px;
+}
