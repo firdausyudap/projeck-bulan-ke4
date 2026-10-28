@@ -18,11 +18,13 @@ app.add_middleware(
 
 
 @app.get("/health")
+@app.get("/python-service/health")
 def health():
     return {"status": "ok", "service": "python-service"}
 
 
 @app.get("/search/suggest")
+@app.get("/python-service/search/suggest")
 def suggest(q: str = ""):
     """Placeholder endpoint for search suggestions."""
     return {"query": q, "suggestions": []}

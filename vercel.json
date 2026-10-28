@@ -2,25 +2,37 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
     "api": {
-      "root": "apps/api",
+      "root": "apps/api/",
       "framework": "express",
-      "entrypoint": "src/index.ts",
-      "installCommand": "npm --prefix ../.. install",
+      "entrypoint": "api/index.ts",
+      "installCommand": "npm --prefix ../.. ci",
       "buildCommand": "npm --prefix ../.. run prisma:generate && npm --prefix ../.. run build:api"
     },
     "python-service": {
-      "root": "apps/python-service",
+      "root": "apps/python-service/",
       "framework": "fastapi",
       "entrypoint": "main:app"
     },
     "web": {
-      "root": "apps/web",
+      "root": "apps/web/",
       "framework": "vite",
-      "installCommand": "npm --prefix ../.. install",
-      "buildCommand": "npm --prefix ../.. run build:web"
+      "installCommand": "npm --prefix ../.. ci",
+      "buildCommand": "npm --prefix ../.. run build:web",
+      "rewrites": [
+        {
+          "source": "/(.*)",
+          "destination": "/index.html"
+        }
+      ]
     }
   },
   "rewrites": [
+    {
+      "source": "/python-service/(.*)",
+      "destination": {
+        "service": "python-service"
+      }
+    },
     {
       "source": "/api/(.*)",
       "destination": {
