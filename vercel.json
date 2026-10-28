@@ -5,8 +5,8 @@
       "root": "apps/api/",
       "framework": "express",
       "entrypoint": "api/index.ts",
-      "installCommand": "npm --prefix ../.. ci",
-      "buildCommand": "npm --prefix ../.. run prisma:generate && npm --prefix ../.. run build:api"
+      "installCommand": "npm ci --prefix \"$(git rev-parse --show-toplevel)\" --workspaces --include-workspace-root",
+      "buildCommand": "npm exec --workspace=@pajajaran/api -- prisma generate --schema ../../prisma/schema.prisma && npm run build --workspace=@pajajaran/shared && npm run build --workspace=@pajajaran/api"
     },
     "python-service": {
       "root": "apps/python-service/",
@@ -16,8 +16,8 @@
     "web": {
       "root": "apps/web/",
       "framework": "vite",
-      "installCommand": "npm --prefix ../.. ci",
-      "buildCommand": "npm --prefix ../.. run build:web",
+      "installCommand": "npm ci --prefix \"$(git rev-parse --show-toplevel)\" --workspaces --include-workspace-root",
+      "buildCommand": "npm run build --workspace=@pajajaran/web",
       "rewrites": [
         {
           "source": "/(.*)",
